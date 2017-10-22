@@ -1,0 +1,39 @@
+<mat-toolbar color="warn" class="mat-elevation-z2" id="fixedHeader">
+  <button (click)="sidenav.toggle()" mat-icon-button fxShow.xs="true" fxShow.sm="true" fxShow.gt-md="false" fxShow="false">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <a class="logo" href="/"><span>Optima</span></a>
+  <span class="pName">Merina Baysand</span>
+  <span class="spacer"></span>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon svgIcon="help-circle-outline"></mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+  </mat-menu>
+  <!--<button mat-icon-button>
+    <mat-icon>help</mat-icon>
+  </button>
+  <button mat-icon-button>
+    <mat-icon>settings</mat-icon>
+  </button>
+  <button mat-icon-button id="UserName">SK</button>-->
+</mat-toolbar>
+<br><br><br><br><br><br><br><br><br><br>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav class="example-sidenav">
+    Jolly good!
+  </mat-sidenav>
+  <div class="example-sidenav-content">
+    <button type="button" mat-button (click)="sidenav.open()">
+      Open sidenav
+    </button>
+    <router-outlet></router-outlet>
+  </div>
+</mat-sidenav-container>
+
+<!---->
+<!--<a routerLink="/">Login</a>
+<a routerLink="inbox">Inbox</a>
+<a routerLink="admin-dashboard">Admin Dashboard</a>-->

@@ -1,1 +1,130 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet';
+@import '~https://fonts.googleapis.com/icon?family=Material+Icons';
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+body, html{
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, sans-serif;
+    overflow: hidden;
+    background: #EEE;
+}
+
+.spacer {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+#fixedHeader{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 1;
+    background-color:#FAA61A;
+    color:#ffffff;
+    padding: 0 15px 0 0;
+}
+
+.logo{
+    background: url('/assets/login_logo.png') 0 0 no-repeat;
+    width: 99px;
+    height: 26px;
+    font-size:0px;
+    line-height: 0px;
+    color: transparent;
+    margin-left:15px;
+}
+
+.pName {
+    position: absolute;
+    font-size: 12px;
+    line-height: 12px;
+    left: 14px;
+    bottom: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 500px;
+}
+
+.mat-menu-content{
+  padding: 0px !important;
+}
+
+.mat-menu-item{
+  font-size: 14px !important
+}
+
+#UserName{
+    background-color: #ff5722;
+    display: inline-block;
+    font-style: normal;
+    margin-left: 10px;
+    text-align: center
+}
+
+.InlineBtn{
+    padding: 5px;
+    border-top:#ccc 1px solid;
+    color: rgba(0,0,0,.67);
+    text-align: left
+}
+
+.UserBlock{
+    overflow: hidden;
+    text-align: right;
+    padding: 10px;
+    border-bottom: #ccc 1px solid
+}
+
+.UserBlock .UserRow{
+    overflow: hidden;
+}
+
+.UserBlock .UserRow{
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.UserBlock .UserRow .UserProfile {
+    background: #ff5722;
+    color: #fff;
+    border-radius: 100%;
+    width: 40px;
+    line-height: 40px;
+    font-size: 15px;
+    overflow: hidden;
+    display: inline-block;
+    text-align: center;
+    margin-right: 20px;
+    vertical-align: top
+}
+
+.UserBlock .UserRow .UserData{
+    overflow: hidden;
+    display: inline-block;
+    font-size: 14px;
+    vertical-align: top
+}
+
+.UserBlock .UserRow .UserData div{
+    margin-bottom: 5px;
+}
+
+.Logout{
+    line-height: 30px;
+    font-size: 12px;
+    min-width: 70px;
+}
+
+.ChooseProperty md-icon{
+    height: 28px;
+    overflow: hidden
+}
