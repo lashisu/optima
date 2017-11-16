@@ -1,35 +1,91 @@
 <mat-toolbar color="warn" class="mat-elevation-z2" id="fixedHeader">
   <button (click)="sidenav.toggle()" mat-icon-button fxShow.xs="true" fxShow.sm="true" fxShow.gt-md="false" fxShow="false">
-    <mat-icon>menu</mat-icon>
+    <mat-icon svgIcon="menu"></mat-icon>
   </button>
   <a class="logo" href="/"><span>Optima</span></a>
   <span class="pName">Merina Baysand</span>
   <span class="spacer"></span>
-  <button mat-icon-button [matMenuTriggerFor]="menu">
+  <button mat-icon-button [matMenuTriggerFor]="helpMenu">
     <mat-icon svgIcon="help-circle-outline"></mat-icon>
   </button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item>Item 1</button>
-    <button mat-menu-item>Item 2</button>
-  </mat-menu>
-  <!--<button mat-icon-button>
-    <mat-icon>help</mat-icon>
-  </button>
-  <button mat-icon-button>
-    <mat-icon>settings</mat-icon>
-  </button>
-  <button mat-icon-button id="UserName">SK</button>-->
-</mat-toolbar>
-<br><br><br><br><br><br><br><br><br><br>
-<mat-sidenav-container class="example-container">
-  <mat-sidenav #sidenav class="example-sidenav">
-    Jolly good!
-  </mat-sidenav>
-  <div class="example-sidenav-content">
-    <button type="button" mat-button (click)="sidenav.open()">
-      Open sidenav
+  <mat-menu #helpMenu="matMenu" x-position="before" yPosition="below" [overlapTrigger]="false">
+    <mat-nav-list class="HeaderDropNav">
+      <a mat-list-item routerLink="inbox">Help </a>
+      <a mat-list-item routerLink="rates">Support</a>
+      <a mat-list-item routerLink="parity">Training Calendar</a>
+    </mat-nav-list>
+    <div class="InlineBtn">
+      <button mat-icon-button>
+        <mat-icon svgIcon="wechat"></mat-icon>
     </button>
-    <router-outlet></router-outlet>
+      <button mat-icon-button>
+        <mat-icon svgIcon="phone"></mat-icon>
+    </button>
+      <button mat-icon-button>
+        <mat-icon svgIcon="skype"></mat-icon>
+    </button>
+      <button mat-icon-button>
+        <mat-icon svgIcon="email"></mat-icon>
+    </button>
+    </div>
+  </mat-menu>
+  <button mat-icon-button style="margin:0 5px">
+    <mat-icon svgIcon="settings"></mat-icon>
+  </button>
+  <button mat-icon-button id="UserName" [matMenuTriggerFor]="userMenu">SK</button>
+  <mat-menu #userMenu="matMenu" x-position="before" yPosition="below" [overlapTrigger]="false">
+    <div class="UserBlock">
+      <div class="UserRow">
+        <span class="UserProfile">SK</span>
+        <div class="UserData">
+          <div>Sushil Kumar</div>
+          <div>sushil.kumar@rategain.com</div>
+        </div>
+      </div>
+      <button mat-raised-button color="warn" class="Logout">Logout</button>
+    </div>
+    <button mat-menu-item class="ChooseProperty"><mat-icon svgIcon="hotel"></mat-icon> Choose Property</button>
+  </mat-menu>
+</mat-toolbar>
+<mat-sidenav-container id="Wrapper">
+  <mat-sidenav #sidenav [mode]="navMode" opened="true" class="SideNavPane">
+    <mat-nav-list>
+      <a mat-list-item routerLink="inbox">
+        <mat-icon svgIcon="inbox"></mat-icon>
+        <span>Inbox</span>
+      </a>
+      <h3>Analysis</h3>
+      <a mat-list-item routerLink="rates">
+        <mat-icon svgIcon="currency-usd"></mat-icon>
+        <span>Rates</span>
+      </a>
+      <a mat-list-item routerLink="parity">
+        <mat-icon svgIcon="thumb-up"></mat-icon>
+        <span>Parity</span>
+      </a>
+      <a mat-list-item routerLink="rank">
+        <mat-icon svgIcon="flag-variant"></mat-icon>
+        <span>Rank</span>
+      </a>
+      <a mat-list-item routerLink="market">
+        <mat-icon svgIcon="chart-line"></mat-icon>
+        <span>Market</span>
+      </a>
+      <h3>Action</h3>
+      <a mat-list-item routerLink="ondemand">
+        <mat-icon svgIcon="file-document"></mat-icon>
+        <span>OnDemand</span>
+      </a>
+      <a mat-list-item routerLink="reports">
+        <mat-icon svgIcon="download"></mat-icon>
+        <span>Reports</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <div class="SideNavContent">
+    <div class="PageData">      
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </mat-sidenav-container>
 

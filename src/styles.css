@@ -29,17 +29,22 @@ body {
     z-index: 1;
     background-color:#FAA61A;
     color:#ffffff;
-    padding: 0 15px 0 0;
+    padding: 10px;
+    min-height: 60px !important;
+}
+
+#fixedHeader .mat-toolbar-row{
+    align-items: end;
+    height: auto;
 }
 
 .logo{
-    background: url('/assets/login_logo.png') 0 0 no-repeat;
+    background: url('/assets/login_logo.png') 50% 50% no-repeat;
     width: 99px;
     height: 26px;
     font-size:0px;
     line-height: 0px;
     color: transparent;
-    margin-left:15px;
 }
 
 .pName {
@@ -47,18 +52,18 @@ body {
     font-size: 12px;
     line-height: 12px;
     left: 14px;
-    bottom: 12px;
+    bottom: 6px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     width: 500px;
 }
 
-.mat-menu-content{
-  padding: 0px !important;
+.mat-menu-content, .HeaderDropNav{
+    padding: 0px !important;
 }
 
-.mat-menu-item{
+.HeaderDropNav .mat-list-item, .mat-menu-item{
   font-size: 14px !important
 }
 
@@ -124,7 +129,96 @@ body {
     min-width: 70px;
 }
 
-.ChooseProperty md-icon{
+.ChooseProperty mat-icon{
     height: 28px;
     overflow: hidden
+}
+
+#Wrapper{
+    position: fixed;
+    top:60px;
+    left:0;
+    right:0;
+    bottom: 0;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+#Wrapper .SideNavPane{
+    width:225px;
+    background: transparent;
+    margin-top:3px;
+}
+
+#Wrapper .SideNavContent{
+    padding:15px;
+}
+
+#Wrapper .SideNavPane mat-nav-list{
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+#Wrapper .SideNavPane mat-nav-list a {
+    display: block;
+    line-height: 36px;
+    color: #6F6A6A;
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 1px;
+    position: relative;
+}
+
+#Wrapper .SideNavPane mat-nav-list a.active {
+    color: #ff5722;
+}
+
+#Wrapper .SideNavPane mat-nav-list h3 {
+    font-size: 11px;
+    margin: 35px 0 5px;
+    padding: 0 15px;
+    font-weight: 400;
+}
+
+#Wrapper .SideNavPane mat-nav-list a > div{
+    height: 36px !important;
+}
+
+.icon-48{
+    height: 48px !important;
+    width: 48px !important;
+    font-size: 48px !important;
+}
+
+@media (min-width:1280px) {
+    
+}
+
+@media (max-width: 1279px) {
+    
+}
+
+@media (max-width: 960px) {
+    #fixedHeader{
+        padding: 10px 10px 10px 0;
+    }
+    .pName {
+        left:40px;
+    }
+    #Wrapper .SideNavPane {
+        background-color: #EEEEEE;
+        margin-top:0px;
+    }
+}
+
+@media (max-width: 767px) {
+   
+}
+
+@media (max-width: 600px) {
+
+}
+
+@media (max-width: 599px) {
+
 }

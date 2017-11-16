@@ -5,13 +5,17 @@ import { HttpModule } from "@angular/http";
 // Material Flex
 import { FlexLayoutModule } from "@angular/flex-layout";
 // Material
-import { MatMenuModule, MatButtonModule, MatSidenavModule, MatCheckboxModule, MatToolbarModule, MatIconModule } from '@angular/material';
+import { MatExpansionModule, MatTabsModule, MatMenuModule, MatListModule, MatCardModule, MatButtonModule, MatSidenavModule, MatCheckboxModule, MatToolbarModule, MatIconModule } from '@angular/material';
 
 const MODULES = [
   CommonModule,
   HttpModule,
   FlexLayoutModule,
+  MatExpansionModule,
+  MatTabsModule,
   MatMenuModule,
+  MatListModule,
+  MatCardModule,
   MatButtonModule,
   MatSidenavModule,
   MatCheckboxModule,
